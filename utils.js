@@ -22,15 +22,20 @@ async function exec(targetStoreIds = [320, 479, 645, 448, 388], phone = 'MGLH3CH
     const allStores = res.data.stores
     let finded = false
     const targetStores = targetStoreIds.map(v => `R${v}`)
+
+    let targetPhones = Array.isArray(phone) ? phone : [phone]
     targetStores.forEach(store => {
         if (finded) {
             return
         }
-        if (allStores[store][phone].availability.unlocked === true) {
-            finded = true;
-            const url = `https://reserve-prime.apple.com/CN/zh_CN/reserve/A/availability?store=${store}&iUP=N&appleCare=N&rv=0&partNumber=${phone}`
-            open(url, "chrome");
-        }
+        targetPhones.forEach(phone => {
+
+            if (allStores[store][phone].availability.unlocked === true) {
+                finded = true;
+                const url = `https://reserve-prime.apple.com/CN/zh_CN/reserve/A/availability?store=${store}&iUP=N&appleCare=N&rv=0&partNumber=${phone}`
+                open(url, "chrome");
+            }
+        })
     })
     if (finded) {
         console.log(chalk.green(`${fecha.format(time, 'HH:mm:ss')}: Founded!!!`))
