@@ -1,0 +1,19 @@
+{
+  "name": "apple-reserve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
+    "fecha": "^4.2.0",
+    "lodash": "^4.17.20",
+    "open": "^7.3.0"
+  }
+}
