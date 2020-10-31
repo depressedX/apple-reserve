@@ -8,7 +8,8 @@ function timeoutFunc() {
         if (!res) {
             timer = setTimeout(timeoutFunc, 1000)
         }
-    }).catch(() => {
+    }).catch((e) => {
+        console.log('error occured. retry')
         timer = setTimeout(timeoutFunc, 1000)
     })
 }

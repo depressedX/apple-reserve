@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title data-i18n="generalOptions"></title>
+<link rel="shortcut icon" href="images/icon16.png">
+<link rel="stylesheet" href="css/options.css">
+<script src="js/changelog.js"></script>
+<script src="js/options.js"></script>
+</head>
+<body id="fields">
+<h1 data-i18n="generalOptions"></h1>
+<ul id="nav">
+  <li><a id="nav-fields" accesskey="l" data-i18n="optionsTabsFields"></a></li>
+  <li><a id="nav-advanced" accesskey="n" data-i18n="optionsTabsAdvanced"></a></li>
+  <li><a id="nav-exceptions" accesskey="c" data-i18n="optionsTabsExceptions"></a></li>
+  <li><a id="nav-textclips" accesskey="t" data-i18n="optionsTabsTextClips"></a></li>
+  <li><a id="nav-variables" accesskey="v" data-i18n="optionsTabsVariables"></a></li>
+  <li><a id="nav-importexport" accesskey="i" data-i18n="optionsTabsImportExport"></a></li>
+  <li><a id="nav-other" accesskey="o" data-i18n="optionsTabsOther"></a></li>
+  <li><a id="nav-support" accesskey="u" data-i18n="optionsTabsSupport"></a></li>
+</ul>
+<p id="header" class="small">
+  <span id="nav-datasize" data-i18n="generalData"></span>
+  <a id="nav-whatsnew" accesskey="/"></a>
+</p>
+<hr class="ruler">
+<p id="status"><span></span></p>
+<div id="tab-fields" class="tab-content">
+  <table id="content-fields">
+    <tbody id="content-fields-body">
+      <tr>
+        <th id="col-type"><span data-i18n="optionsFieldsTypeCol"></span><span class="caption" data-i18n="optionsFieldsTypeColHelp"></span></th>
+        <th id="col-name" class="icon-help"><a id="help-name" class="tt-anchor"></a><span data-i18n="optionsFieldsNameCol"></span><span class="caption" data-i18n="optionsFieldsNameColHelp"></span></th>
+        <th id="col-value" class="icon-help"><a id="help-value" class="tt-anchor"></a><span data-i18n="optionsFieldsValueCol"></span><span class="caption" data-i18n="optionsFieldsValueColHelp"></span></th>
+        <th id="col-site" class="icon-help"><a id="help-site" class="tt-anchor"></a><span data-i18n="optionsFieldsSiteCol"></span><span class="caption" data-i18n="optionsFieldsSiteColHelp"></span></th>
+        <th id="col-mode" class="icon-help"><a id="help-mode" class="tt-anchor"></a><span data-i18n="optionsFieldsModeCol"></span><span class="caption" data-i18n="optionsFieldsModeColHelp"></span></th>
+        <th id="col-action">&nbsp;</th>
+      </tr>
+    </tbody>
+  </table>
+  <p id="content-actionbar">
+    <button id="button-add" accesskey="a">+</button>
+    <select id="content-cats" accesskey="p">
+      <option class="menu-divider" data-i18n="optionsProfilesMenuProfiles"></option>
+      <option value="all" data-i18n="optionsProfilesMenuAll"></option>
+      <option value="" data-i18n="optionsProfilesMenuUnfiled"></option>
+      <option class="menu-action"></option>
+      <option class="menu-divider" role="separator">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</option>
+    </select>
+    <span class="flex-item"><label for="content-site" data-i18n="optionsFieldsSite"></label>:&nbsp;<input id="content-site" data-i18n="optionsTabsSiteInput"></span>
+    <span class="flex-item"><label for="content-hotkey" data-i18n="optionsFieldsHotkey"></label>:&nbsp;<input id="content-hotkey" data-i18n="optionsTabsHotkeyInput"></span>
+  </p>
+</div>
+<div id="tab-advanced" class="tab-content">
+  <p data-i18n="optionsAdvancedIntro"></p>
+  <p>
+    <textarea id="content-advanced" rows="20"></textarea>
+  </p>
+</div>
+<div id="tab-exceptions" class="tab-content">
+  <p data-i18n="optionsExceptionsIntro"></p>
+  <p>
+    <textarea id="content-exceptions" rows="20"></textarea>
+  </p>
+</div>
+<div id="tab-textclips" class="tab-content">
+  <p data-i18n="optionsTextClipsIntro"></p>
+  <p>
+    <textarea id="content-textclips" rows="20"></textarea>
+  </p>
+</div>
+<div id="tab-variables" class="tab-content">
+  <p data-i18n="optionsVariablesIntro"></p>
+  <p>
+    <textarea id="content-variables" rows="20"></textarea>
+  </p>
+</div>
+<div id="tab-importexport" class="tab-content">
+  <p data-i18n="optionsImportExportIntro"></p>
+  <p>
+    <textarea id="content-ie" rows="20"></textarea>
+  </p>
+  <p>
+    <button id="button-import" data-i18n="buttonsImport"></button>
+    <button id="button-export" data-i18n="buttonsExport"></button>
+    &nbsp; <span data-i18n="optionsImportMode"></span>:&nbsp;
+    <input id="radio-replace" name="import-mode" type="radio" checked="checked"><label for="radio-replace" data-i18n="optionsImportReplace"></label>
+    <input id="radio-append" name="import-mode" type="radio"><label for="radio-append" data-i18n="optionsImportAppend"></label>
+  </p>
+  <hr class="dotted">
+  <p data-i18n="optionsImportUrl"></p>
+  <p>
+    <input id="content-importurl">
+  </p>
+  <p>
+    <button id="button-importurl" data-i18n="buttonsImportUrl"></button>
+    &nbsp; <input id="content-autoimport" type="checkbox"><label for="content-autoimport" data-i18n="optionsImportAutoImport"></label>
+  </p>
+</div>
+<div id="tab-other" class="tab-content">
+  <fieldset>
+    <legend data-i18n="optionsOtherOperation"></legend>
+    <p>
+      <input id="content-backup" type="checkbox"><label for="content-backup" data-i18n="optionsOtherBackup"></label>:
+      &nbsp;
+      <input id="content-backup-chars" type="number" min="1" max="10000" data-i18n="optionsOtherBackupCharsInput"> <span data-i18n="optionsOtherBackupChars"></span>
+    </p>
+    <p class="small" data-i18n="optionsOtherBackupHelp"></p>
+    <p>
+      <input id="content-manual" type="checkbox"><label for="content-manual" data-i18n="optionsOtherManual"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherManualHelp"></p>
+    <p>
+      <input id="content-delay" type="checkbox"><label for="content-delay" data-i18n="optionsOtherDelay"></label>:
+      &nbsp;
+      <input id="content-delay-sec" type="range" min="0.5" max="60" step="0.5" data-i18n="optionsOtherDelaySecInput"> <span id="content-delay-out"></span> <span data-i18n="optionsOtherDelaySec"></span>
+    </p>
+    <p class="small" data-i18n="optionsOtherDelayHelp"></p>
+    <p>
+      <input id="content-labelmatch" type="checkbox"><label for="content-labelmatch" data-i18n="optionsOtherLabelMatch"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherLabelMatchHelp"></p>
+    <p>
+      <input id="content-overwrite" type="checkbox"><label for="content-overwrite" data-i18n="optionsOtherOverwrite"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherOverwriteHelp"></p>
+    <p>
+      <input id="content-vars" type="checkbox"><label for="content-vars" data-i18n="optionsOtherVars"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherVarsHelp"></p>
+    <p>
+      <input id="content-sound" type="checkbox"><label for="content-sound" data-i18n="optionsOtherSound"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherSoundHelp"></p>
+    <p>
+      <input id="content-voice" type="checkbox"><label for="content-voice" data-i18n="optionsOtherVoice"></label>:
+      &nbsp;
+      <select id="content-voice-sel">
+        <option>Elric</option>
+        <option>Jeannie</option>
+        <option>Merlin</option>
+        <option>Sabrina</option>
+        <option>Samantha</option>
+        <option>Simon</option>
+        <option>Random</option>
+      </select>
+    </p>
+    <p class="small" data-i18n="optionsOtherVoiceHelp"></p>
+    <p>
+      <input id="content-debug" type="checkbox"><label for="content-debug" data-i18n="optionsOtherDebug"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherDebugHelp"></p>
+  </fieldset>
+  <fieldset>
+    <legend data-i18n="optionsOtherSecurity"></legend>
+    <p>
+      <input id="content-mask" type="checkbox"><label for="content-mask" data-i18n="optionsOtherMask"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherMaskHelp"></p>
+  </fieldset>
+  <fieldset>
+    <legend data-i18n="optionsOtherInterface"></legend>
+    <p>
+      <input id="content-scale" type="checkbox"><label for="content-scale" data-i18n="optionsOtherScale"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherScaleHelp"></p>
+    <p>
+      <input id="content-menu" type="checkbox"><label for="content-menu" data-i18n="optionsOtherMenu"></label>
+    </p>
+    <p class="small" data-i18n="optionsOtherMenuHelp"></p>
+  </fieldset>
+</div>
+<div id="tab-support" class="tab-content">
+  <h3><a href="https://www.tohodo.com/autofill/form.html" target="_blank" data-i18n="optionsSupportPracticeForm"></a> &raquo;</h3>
+  <h3><a href="https://groups.google.com/g/chrome-autofill" target="_blank" data-i18n="optionsSupportSupportForum"></a> &raquo;</h3>
+  <h3><a href="https://www.tohodo.com/autofill/help.html" target="_blank" data-i18n="optionsSupportOnlineHelp"></a> &raquo;</h3>
+  <h3><a href="https://www.tohodo.com/autofill/help.html#keyboard" target="_blank" data-i18n="optionsSupportKeyboardShortcuts"></a> &raquo;</h3>
+  <h3><a href="https://www.tohodo.com/autofill/help.html#faq" title="Frequently Asked Questions" target="_blank">FAQ</a> &raquo;</h3>
+  <h3><a href="https://chrome.google.com/webstore/detail/autofill/nlmmgnhgdeffjkdckmikfpnddkbbfkkk/reviews" target="_blank" data-i18n="optionsSupportRate"></a> &raquo;</h3>
+  <h3><a href="https://www.paypal.me/10basetom" target="_blank" data-i18n="optionsSupportDonate"></a> &raquo;</h3>
+</div>
+<hr>
+<div id="footer">
+  <p id="buttons">
+    <button id="button-save" accesskey="s" data-i18n="buttonsSave"></button>
+    <button id="button-reset" accesskey="r" data-i18n="buttonsReset"></button>
+    <button id="button-help" accesskey="h" data-i18n="buttonsHelp"></button>
+  </p>
+  <p id="copyright" class="small">
+    &copy; 2010&ndash;<span id="yearnow"></span> <a href="https://www.tohodo.com/" target="_blank">THD</a>
+  </p>
+</div>
+<div id="light">
+  <div id="box" tabindex="-1"></div>
+</div>
+<div id="tt"></div>
+<script src="js/tooltip.js"></script>
+<script src="js/tablednd.js"></script>
+</body>
+</html>
