@@ -12,7 +12,7 @@ function makeRequest() {
             'referer': 'https://reserve-prime.apple.com/CN/zh_CN/reserve/A/availability?store=R645&iUP=N&appleCare=N&rv=0&partNumber=MGLH3CH/A',
             'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36'
         },
-        timeout: 5000,
+        timeout: 2500,
     })
 }
 
